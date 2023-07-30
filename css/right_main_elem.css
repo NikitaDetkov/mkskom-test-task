@@ -1,5 +1,40 @@
 .main-right_elem {
-    padding: 30px 30px 0 0;
+    padding: 30px 30px 30px 0;
+}
+
+.right_menu-inside {
+    display: flex;
+}
+
+.images-left-menu {
+
+}
+
+.left-menu-top {
+    padding: 0 0 30px 0;
+}
+
+.head-elem {
+    padding: 30px 20px 15px 20px;
+}
+
+.head-elem-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px 45px 10px 20px;
+    gap: 10px;
+    background-color: #FF6633;
+}
+
+.head-elem-button .text {
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    width: 145px;
 }
 
 .right_menu-inside {
@@ -7,21 +42,68 @@
     border-radius: 15px;
 }
 
+.images-height-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px 20px 20px;
+}
+
+.height-menu-elem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-search {
+    width: 180px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid #F5F6F7;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.input-text-search {
+    border: 0;
+    line-height: 20px;
+    font-size: 10px;
+    font-weight: 900;
+    color:#7D8FB3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-text-search::-webkit-input-placeholder {
+    font-size: 10px;
+    font-weight: 900;
+    color:#7D8FB3;
+}
+
+.input-text-search:focus {
+    outline: none;
+}
+
 .images-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 45px;
     gap: 30px;
 }
 
 .images-item {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 
 .images-item-box {
     border-radius: 10px;
     border: 2px solid #F5F6F7;
-    padding: 5px;
+    padding: 3px;
     box-sizing: border-box;
     display:flex;
     align-items:center;
@@ -32,4 +114,27 @@
     width: 150px;
     height: 110px;
     border-radius: 5px;
+}
+
+.images-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.images-item-info .header {
+    line-height: 20px;
+    font-size: 12px;
+    color: #6B7A99;
+    text-align: center;
+}
+
+.images-item-info .text {
+    font-weight: 900;
+    line-height: 20px;
+    font-size: 10px;
+    color: #7D8FB3;
+    text-align: center;
 }

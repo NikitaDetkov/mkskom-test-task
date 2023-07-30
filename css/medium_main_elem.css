@@ -35,14 +35,6 @@
     justify-content: center;
 }
 
-.border-right {
-    border-right: 2px solid #EDEFF2;
-}
-
-.border-bottom {
-    border-bottom: 2px solid #EDEFF2;
-}
-
 .item-content {
     display: flex;
     justify-content: center;
@@ -64,18 +56,8 @@
     padding: 0 60px;
 }
 
-.round-icon {
-    background-color: white;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .icons_messager {
-    padding: 0 60px;
+    padding: 0 58px;
 }
 
 .icons_messager_box {
@@ -85,6 +67,6 @@
     border: 2px solid #EDEFF2;
     border-radius: 30px;
     height: 60px;
-    width: 240px;
+    width: 236px;
     align-items: center;
 }

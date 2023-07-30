@@ -1,18 +1,20 @@
 const App = {
     data: () => ({
-        counter: 12,
-        albumId: null,
-        images: []
+        albumId: '',
+        images_buff: [],
+        images: [],
     }),
     methods: {
-        async getImages(quantity) {
-            const url = 'https://jsonplaceholder.typicode.com/albums/3/photos';
+        async getImages(albumId) {
+            const url = `https://jsonplaceholder.typicode.com/albums/${albumId}/photos`;
             let response = await fetch(url);
-            this.images = await response.json();
+            this.images_buff = await response.json();
+            this.images = this.images_buff.slice(0, 16)
+            albumId = '';
         }
     },
     mounted() {
-        this.getImages()
+        this.getImages(1)
     }
 }
 
