@@ -1,0 +1,90 @@
+.main-medium_elem {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.person-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.person-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    border-radius: 15px;
+    border: 2px solid #EDEFF2;
+    overflow: hidden;
+}
+
+.menu-line {
+    display: flex;
+}
+
+.menu-item {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.border-right {
+    border-right: 2px solid #EDEFF2;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #EDEFF2;
+}
+
+.item-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+.item-content-text {
+    font-size: 12px;
+    line-height: 20px;
+    color: #ADB8CC;
+}
+ 
+.icons-person-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.round-icon {
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons_messager {
+    padding: 0 60px;
+}
+
+.icons_messager_box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid #EDEFF2;
+    border-radius: 30px;
+    height: 60px;
+    width: 240px;
+    align-items: center;
+}

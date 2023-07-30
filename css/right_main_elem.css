@@ -1,0 +1,35 @@
+.main-right_elem {
+    padding: 30px 30px 0 0;
+}
+
+.right_menu-inside {
+    background-color: white;
+    border-radius: 15px;
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 45px;
+    gap: 30px;
+}
+
+.images-item {
+
+}
+
+.images-item-box {
+    border-radius: 10px;
+    border: 2px solid #F5F6F7;
+    padding: 5px;
+    box-sizing: border-box;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.images-item-image {
+    width: 150px;
+    height: 110px;
+    border-radius: 5px;
+}

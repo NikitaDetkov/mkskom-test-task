@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/left_main_elem.css">
+    <link rel="stylesheet" href="./css/medium_main_elem.css">
+    <link rel="stylesheet" href="./css/right_main_elem.css">
     <title>mkskom-test-task</title>
 </head>
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <header>
-            <div class="header-elem">
+            <div class="header-elem gap-35">
                 <div class="round_button"><img src="./images/sticks.png"></div>
-                <h4>Constructor</h4>
+                <h3>Constructor</h3>
             </div>
             <div class="header-elem header-menu">
                 <span>Dashboard</span>
@@ -23,28 +27,131 @@
             </div>
             <div class="header-elem">
                 <form class="form" method="get" @submit.prevent="getImages(1)">
-                    <img src="./images/search.png">
-                    <input type="text" v-model="" placeholder="Search Transactions and Documents">
-                        
+                    <div class="d-flex align-items_center gap-10">
+                        <div class="icon"><img src="./images/search.png"></div>
+                        <input class="input-text" type="text" v-model="" 
+                            placeholder="Search Transactions and Documents">
+                    </div>
                     <button type="submit" class="submit">
                         <img class="submit_img" src="./images/submit.png">
                     </button>
                 </form>
             </div>
-            <div class="header-elem">
+            <div class="header-elem gap-30">
                 <img src="" alt="" srcset="">
                 <span>Clayton Santos</span>
-                <div class="round_button"><img src="./images/bell.png"></div>
-                <div class="round_button"><img src="./images/close.png"></div>
+                <div class="d-flex gap-10">
+                    <div class="round_button"><img src="./images/bell.png"></div>
+                    <div class="round_button"><img src="./images/close.png"></div>
+                </div>
+
             </div>
             
         </header>
         <div class="main">
             <div class="main-left_elem">
-                
+                <div class="d-flex-column gap-20">
+                    <div class="round_button"><img src="./images/compass.png"></div>
+                    <div class="round_button"><img src="./images/star.png"></div>
+                    <div class="round_button"><img src="./images/message.png"></div>
+                    <div class="round_button"><img src="./images/arrow.png"></div>
+                    <div class="round_button"><img src="./images/earth.png"></div>
+                    <div class="round_button"><img src="./images/house.png"></div>
+                </div>
+                <div class="d-flex-column gap-20">
+                    <div class="round_button"><img src="./images/person_1.png"></div>
+                    <div class="round_button"><img src="./images/person_2.png"></div>
+                    <div class="round_button"><img src="./images/person_3.png"></div>
+                    <div class="round_button"><img src="./images/person_4.png"></div>
+                    <div class="round_button"><img src="./images/plus.png"></div>
+                </div>
             </div>
             <div class="main-medium_elem">
-                
+                <div class="d-flex-column gap-40">
+                    <div class="person-info">
+                        <div class="d-flex-column gap-30">
+                            <div class="icons-person-box">
+                                <div class="round-icon"><img src="./images/person_neg.png"></div>
+                                <div class="round-icon"><img src="./images/menu.png"></div>
+                            </div>
+                            <div class="person-photo"><img src="./images/big_person_1.png"></div>
+                        </div>
+                        <div class="d-flex-column gap-10 cont-center">
+                            <h4>Hello Alfred Bryant</h4>
+                            <h5>adrain.nader@yahoo.com</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex cont-center">
+                        <div class="menu">
+                            <div class="menu-line border-bottom">
+                                <div class="menu-item border-right">
+                                    <div class="item-content">
+                                        <div class="icon"><img src="./images/dashboard.png"></div>
+                                        <span class="item-content-text">Dashboard</span>
+                                    </div>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-content">
+                                        <div class="icon"><img src="./images/notes.png"></div>
+                                        <span class="item-content-text">Notes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-line border-bottom">
+                                <div class="menu-item border-right">
+                                    <div class="item-content">
+                                        <div class="icon"><img src="./images/file.png"></div>
+                                        <span class="item-content-text">Invoice</span>
+                                    </div>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-content">
+                                        <div class="icon"><img src="./images/cloud.png"></div>
+                                        <span class="item-content-text">Files</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-line border-bottom">
+                                <div class="menu-item border-right">
+                                    <div class="item-content">
+                                        <div class="icon"><img src="./images//fire.png"></div>
+                                        <span class="item-content-text">Events</span>
+                                    </div>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-content">
+                                        <div class="icon"><img src="./images/teams.png"></div>
+                                        <span class="item-content-text">Teams</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-line">
+                                <div class="menu-item border-right">
+                                    <div class="item-content">
+                                        <div class="icon"><img src="./images/messages.png"></div>
+                                        <span class="item-content-text">Message</span>
+                                    </div>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-content">
+                                        <div class="icon"><img src="./images/wrench.png"></div>
+                                        <span class="item-content-text">Settings</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="icons_messager">
+                    <div class="icons_messager_box">
+                        <div class="icon"><img src="./images/phone.png"></div>
+                        <div class="icon"><img src="./images/envelope.png"></div>
+                        <div class="icon"><img src="./images/contact.png"></div>
+                        <div class="icon"><img src="./images/telegram.png"></div>
+                        <div class="icon"><img src="./images/whatsapp.png"></div>
+                    </div>
+                </div>
             </div>
             <div class="main-right_elem">
                 <div class="right_menu-inside">

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    background-color: #F7F8FA;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #4D5E80;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #6B7A99;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #ADB8CC;
+}
+
+.round_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-center {
+    justify-content: center;
+    text-align: center;
+}
+
+.gap-40 {
+    gap: 40px
+}
+
+.gap-35 {
+    gap: 35px
+}
+
+.gap-30 {
+    gap: 30px
+}
+
+.gap-20 {
+    gap: 20px
+}
+
+.gap-10 {
+    gap: 10px
+}
+
+.align-items_center {
+    align-items: center;
+}
+
+[v-cloak] {
+    display: none;
+}
