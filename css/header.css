@@ -9,6 +9,8 @@ header {
     line-height: 25px;
 
     align-items: center;
+
+    height: 48px;
 }
 
 .header-elem {

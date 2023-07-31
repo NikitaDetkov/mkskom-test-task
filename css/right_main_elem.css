@@ -1,5 +1,5 @@
 .main-right_elem {
-    padding: 30px 30px 30px 0;
+    padding: 30px 30px 28px 0;
 }
 
 .right_menu-inside {
@@ -34,7 +34,6 @@
     padding: 0 20px;
     padding-top: 10px;
 }
-
 
 .list-numbers {
     font-weight: 900;
@@ -85,6 +84,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px 20px 20px 20px;
+    height: 38px;
 }
 
 .height-menu-elem {
@@ -147,13 +147,8 @@
     justify-content: center;
     padding: 45px;
     gap: 30px;
-}
-
-.images-container-grid {
-    padding: 45px;
-    gap: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    height: 840px;
+    width: 730px;
 }
 
 .images-item {
@@ -161,6 +156,41 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+}
+
+.images-container-grid {
+    padding: 45px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 840px;
+    width: 730px;
+}
+
+.container-grid-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.container-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+ 
+.d-none {
+    display: none;
+}
+
+.images-item-grid {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.images-item-grid .img {
+    height: 100%;
+    width: 100%;
 }
 
 .images-item-box {

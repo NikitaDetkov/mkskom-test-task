@@ -252,6 +252,7 @@
 
                             </div>
                         </div>
+
                         <div class="images-container" id="images-container">
                             <div v-for="(image, ind) in images" class="images-item" :key="ind">
                                 <div class="images-item-box">
@@ -263,6 +264,22 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="images-container-grid d-none" id="images-container-grid">
+                            <div class="container-grid-top">
+                                <div v-for="(image, ind) in top_images" key="ind" class="images-item-grid">
+                                    <img class="img" :src="image.url">
+                                </div>                                
+                            </div>
+
+                            <div class="container-grid-bottom">
+                                <div v-for="(image, ind) in bottom_images" key="ind" class="images-item-grid">
+                                    <img class="img" :src="image.url">
+                                </div>                                
+                            </div>
+
+                        </div>
+                        
                     </div>
                 </div>
             </div>
