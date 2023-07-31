@@ -84,6 +84,10 @@ h5 {
     text-align: center;
 }
 
+.cont-between {
+    justify-content: space-between;
+}
+
 .gap-40 {
     gap: 40px
 }
@@ -123,19 +127,6 @@ h5 {
     padding: 6px;
 }
 
-.left-button-border {
-    border-radius: 100px 0 0 100px;
-    border: 2px solid #EDEFF2;
-    border-right: 0;
-    padding: 6px 5px 6px 10px;
-}
-
-.right-button-border {
-    border-radius: 0 100px 100px 0;
-    border: 2px solid #EDEFF2;
-    padding: 6px 10px 6px 5px;
-}
-
 .align-items_center {
     align-items: center;
 }
@@ -148,6 +139,10 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+ul {
+    list-style-type: none;
 }
 
 [v-cloak] {

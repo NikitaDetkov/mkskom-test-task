@@ -12,9 +12,16 @@
     gap: 40px;
 }
 
-.person-photo {
+.person-photo-container {
     display: flex;
     justify-content: center;
+}
+
+.person-photo {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 110px;
+    width: 110px;
 }
 
 .menu {

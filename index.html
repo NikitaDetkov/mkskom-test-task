@@ -29,6 +29,7 @@
                 <form class="form d-flex align-items_center gap-10" method="get" @submit.prevent="getImages(albumId)">
                     <div class="icon"><img src="./images/search.png"></div>
                     <input class="input-text" type="text" v-model="albumId" 
+                        @input="event => onlyNumbers(event)"
                         placeholder="Search Transactions and Documents">
                     <button type="submit" class="submit">
                         <img src="./images/submit.png">
@@ -74,7 +75,9 @@
                                 <div class="round-button-small"><img src="./images/person_neg.png"></div>
                                 <div class="round-button-small"><img src="./images/menu.png"></div>
                             </div>
-                            <div class="person-photo"><img src="./images/big_person_1.png"></div>
+                            <div class="person-photo-container">
+                                <div class="person-photo"><img src="./images/big_person_1.png"></div>
+                            </div>
                         </div>
                         <div class="d-flex-column gap-10 cont-center">
                             <h4>Hello Alfred Bryant</h4>
@@ -155,32 +158,80 @@
             </div>
             <div class="main-right_elem">
                 <div class="right_menu-inside">
-                    <div class="images-left-menu border-right">
+                    <div class="border-right">
                         <div class="left-menu-top border-bottom">
                             <div class="head-elem">
                                 <div class="head-elem-button">
-                                    <div class="icon"><img src="" alt=""></div>
+                                    <div class="icon" style="opacity: 0.5;"><img src="./images/file.png"></div>
                                     <span class="text">New Note</span>
                                 </div>
                             </div>
                             <div class="list">
-                                
+                                <div class="d-flex cont-between align-items_center list-head">
+                                    <div class="d-flex gap-20 align-items_center">
+                                        <div class="icon"><img src="./images/folder.png"></div>
+                                        <span>All Notes</span>
+                                    </div>
+                                    <span class="list-numbers">43</span>
+                                </div>
+                                <ul class="d-flex-column gap-15">
+                                    <li v-for="(list_elem, ind) in list_folders" :key="ind" 
+                                        class="d-flex cont-between align-items_center list-elem">
+                                        <div class="d-flex gap-20 align-items_center">
+                                            <div class="icon"><img src="./images/folder.png"></div>
+                                            <span>{{ list_elem.name }}</span>
+                                        </div>
+                                        <span class="list-numbers">{{ list_elem.num }}</span>
+                                    </li>
+                                </ul>
+                                <div class="list-end">
+                                    <div class="d-flex gap-20 align-items_center">
+                                        <div class="icon"><img src="./images/folder.png"></div>
+                                        <span>Add Folder</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="left-menu-bottom">
-                            
+                            <span>Labels</span>
+                            <ul class="d-flex-column gap-15">
+                                <li class="d-flex align-items_center gap-20">
+                                    <div class="icon"><img src="./images/elem_blue.png"></div>
+                                    <span>Notes</span>
+                                </li>
+                                <li class="d-flex align-items_center gap-20">
+                                    <div class="icon"><img src="./images/elem_orange.png"></div>
+                                    <span>Change Notes</span>
+                                </li>
+                                <li class="d-flex align-items_center gap-20">
+                                    <div class="icon"><img src="./images/elem_green.png"></div>
+                                    <span>From Family</span>
+                                </li>
+                                <li class="d-flex align-items_center gap-20">
+                                    <div class="icon"><img src="./images/elem_violet.png"></div>
+                                    <span>Imagium</span>
+                                </li>
+                                <li class="d-flex align-items_center gap-20">
+                                    <div class="icon"><img src="./images/elem_blue.png"></div>
+                                    <span>Work</span>
+                                </li>
+                                <li class="d-flex align-items_center gap-20">
+                                    <div class="icon"><img src="./images/plus.png"></div>
+                                    <span>New Label</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div>
                         <div class="images-height-menu border-bottom">
                             <div class="height-menu-elem">
                                 <div class="d-flex cont-center align-items_center">
-                                    <div class="left-button-border">
+                                    <div class="left-button-border" @click="toFlex">
                                         <div class="icon-small">
                                             <img src="./images/flex.png">
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items_center right-button-border">
+                                    <div class="d-flex align-items_center right-button-border" @click="toGrid">
                                         <div class="icon-small">
                                             <img src="./images/grid.png">
                                         </div>
@@ -201,7 +252,7 @@
 
                             </div>
                         </div>
-                        <div class="images-container">
+                        <div class="images-container" id="images-container">
                             <div v-for="(image, ind) in images" class="images-item" :key="ind">
                                 <div class="images-item-box">
                                     <img class="images-item-image" :src="image.url">
@@ -214,9 +265,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
 
 
