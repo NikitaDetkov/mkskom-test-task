@@ -1,0 +1,40 @@
+@media(max-width: 900px)  {
+    .mobile-none {
+        display: none;
+    }
+
+    .desktop-none {
+        display: block;
+    }
+
+    .main-right_elem {
+        padding: 15px;
+    }
+
+    .container-grid-top {
+        grid-template-columns: 1fr;
+    }
+    
+    .container-grid-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .images-container-grid {
+        padding: 18px;
+        gap: 30px;
+    }
+
+    .images-container {
+        padding: 18px;
+        gap: 10px;
+    }
+
+    .images-item {
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    .images-item-image {
+        width: 130px;
+    }
+}

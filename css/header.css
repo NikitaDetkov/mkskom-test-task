@@ -11,6 +11,7 @@ header {
     align-items: center;
 
     height: 48px;
+    max-width: 1552px;
 }
 
 .header-elem {
@@ -65,3 +66,4 @@ header {
 .submit:hover, .submit:active {
     cursor: pointer;
 }
+

@@ -3,7 +3,6 @@ const App = {
         albumId: '',
         images_buff: [],
         images: [],
-        isFlex: true,
         list_folders: [
             {
                 name: 'Designer', num: 23
@@ -29,6 +28,9 @@ const App = {
         ]
     }),
     methods: {
+        // Получить изображения с сервера
+        // Входные данные: номер альбома
+        // Получает данные в переменную images
         async getImages(albumId) {
             const url = `https://jsonplaceholder.typicode.com/albums/${albumId}/photos`;
             let response = await fetch(url);
@@ -37,31 +39,33 @@ const App = {
             this.images = this.images_buff.slice(0, 16);
             this.top_images =  this.images.slice(0, 2);
             this.bottom_images =  this.images.slice(2, 5);
+
+            this.albumId = '';
         },
+        // Скорректировать ввод: только для чисел
         onlyNumbers(input) {
             let regChars = /[\D]/g;
             input.target.value = input.target.value.replace(regChars, '');
         },
+        // Преобразовать галерею к flex
         toFlex() {
             let container_flex = document.querySelector('#images-container');
             let container_grid = document.querySelector('#images-container-grid');
 
             container_flex.classList.remove('d-none');
             container_grid.classList.add('d-none');
-
-            this.isFlex = true;
         },
+        // Преобразовать галерею к grid
         toGrid() {
             let container_flex = document.querySelector('#images-container');
             let container_grid = document.querySelector('#images-container-grid');
 
             container_flex.classList.add('d-none');
             container_grid.classList.remove('d-none');
-
-            this.isFlex = false;
         },
     },
     mounted() {
+        // При загрузке выполняется запрос на картинки 1-го альбома
         this.getImages(1)
     }
 }

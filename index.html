@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="./css/left_main_elem.css">
     <link rel="stylesheet" href="./css/medium_main_elem.css">
     <link rel="stylesheet" href="./css/right_main_elem.css">
+    <link rel="stylesheet" href="./css/adaptability.css">
     <title>mkskom-test-task</title>
 </head>
 <body>
     <div id="app" v-cloak>
         <header>
             <div class="header-elem gap-35">
-                <div class="round-button"><img src="./images/sticks.png"></div>
+                <div class="round-button shadow"><img src="./images/sticks.png"></div>
                 <h3>Constructor</h3>
             </div>
-            <div class="header-elem header-menu">
+            <div class="header-elem header-menu mobile-none">
                 <span>Dashboard</span>
                 <span>About Us</span>
                 <span>News</span>
@@ -25,8 +26,8 @@
                 <span>Contacts</span>
                 <div class="icon"><img src="./images/menu.png"></div>
             </div>
-            <div class="header-elem">
-                <form class="form d-flex align-items_center gap-10" method="get" @submit.prevent="getImages(albumId)">
+            <div class="header-elem mobile-none">
+                <form class="form d-flex align-items_center gap-10 shadow" method="get" @submit.prevent="getImages(albumId)">
                     <div class="icon"><img src="./images/search.png"></div>
                     <input class="input-text" type="text" v-model="albumId" 
                         @input="event => onlyNumbers(event)"
@@ -37,43 +38,54 @@
                 </form>
             </div>
             <div class="header-elem gap-30">
-                <div class="d-flex align-items_center gap-15">
+                <div class="d-flex align-items_center gap-15 mobile-none">
                     <div class="icon"><img src="./images/person.png"></div>
                     <span>Clayton Santos</span>
                 </div>
                 <div class="d-flex gap-10">
-                    <div class="round-button"><img src="./images/bell.png"></div>
-                    <div class="round-button"><img src="./images/close.png"></div>
-                </div>
+                    <div class="position-rel">
+                        <div class="round-button mobile-none shadow"><img src="./images/bell.png"></div>
+                        <div class="point-10 pink-point"></div>
+                    </div>
+                    <div class="round-button mobile-none shadow"><img src="./images/close.png"></div>
 
+                    <div class="desktop-none">
+                        <div class="round-button shadow"><img src="./images/person.png"></div>
+                    </div>
+                </div>
             </div>
-            
         </header>
         <div class="main">
-            <div class="main-left_elem">
+            <div class="main-left_elem mobile-none">
                 <div class="d-flex-column gap-20">
-                    <div class="round-button"><img src="./images/compass.png"></div>
-                    <div class="round-button"><img src="./images/star.png"></div>
-                    <div class="round-button"><img src="./images/message.png"></div>
-                    <div class="round-button"><img src="./images/arrow.png"></div>
-                    <div class="round-button"><img src="./images/earth.png"></div>
-                    <div class="round-button"><img src="./images/house.png"></div>
+                    <div class="round-button shadow"><img src="./images/compass.png"></div>
+                    <div class="position-rel">
+                        <div class="round-button shadow"><img src="./images/star.png"></div>
+                        <div class="point-10 orange-point"></div>
+                    </div>
+                    <div class="round-button shadow"><img src="./images/message.png"></div>
+                    <div class="round-button shadow"><img src="./images/arrow.png"></div>
+                    <div class="round-button shadow"><img src="./images/earth.png"></div>
+                    <div class="round-button shadow"><img src="./images/house.png"></div>
                 </div>
                 <div class="d-flex-column gap-20">
-                    <div class="round-button"><img src="./images/person_1.png"></div>
+                    <div class="position-rel">
+                        <div class="round-button"><img src="./images/person_1.png"></div>
+                        <div class="point-10 orange-point"></div>
+                    </div>
                     <div class="round-button"><img src="./images/person_2.png"></div>
                     <div class="round-button"><img src="./images/person_3.png"></div>
                     <div class="round-button"><img src="./images/person_4.png"></div>
-                    <div class="round-button"><img src="./images/plus.png"></div>
+                    <div class="round-button shadow"><img src="./images/plus.png"></div>
                 </div>
             </div>
-            <div class="main-medium_elem">
+            <div class="main-medium_elem mobile-none">
                 <div class="d-flex-column gap-40">
                     <div class="person-info">
                         <div class="d-flex-column gap-30">
                             <div class="icons-person-box">
-                                <div class="round-button-small"><img src="./images/person_neg.png"></div>
-                                <div class="round-button-small"><img src="./images/menu.png"></div>
+                                <div class="round-button-small shadow"><img src="./images/person_neg.png"></div>
+                                <div class="round-button-small shadow"><img src="./images/menu.png"></div>
                             </div>
                             <div class="person-photo-container">
                                 <div class="person-photo"><img src="./images/big_person_1.png"></div>
@@ -158,16 +170,16 @@
             </div>
             <div class="main-right_elem">
                 <div class="right_menu-inside">
-                    <div class="border-right">
+                    <div class="border-right mobile-none">
                         <div class="left-menu-top border-bottom">
                             <div class="head-elem">
-                                <div class="head-elem-button">
+                                <div class="head-elem-button shadow-orange">
                                     <div class="icon" style="opacity: 0.5;"><img src="./images/file.png"></div>
                                     <span class="text">New Note</span>
                                 </div>
                             </div>
                             <div class="list">
-                                <div class="d-flex cont-between align-items_center list-head">
+                                <div class="d-flex cont-between align-items_center list-head shadow-big">
                                     <div class="d-flex gap-20 align-items_center">
                                         <div class="icon"><img src="./images/folder.png"></div>
                                         <span>All Notes</span>
@@ -225,37 +237,46 @@
                     <div>
                         <div class="images-height-menu border-bottom">
                             <div class="height-menu-elem">
+                                <div class="round-button-border desktop-none shadow">
+                                    <div class="icon-small">
+                                        <img src="./images/sticks.png">
+                                    </div>
+                                </div>
                                 <div class="d-flex cont-center align-items_center">
-                                    <div class="left-button-border" @click="toFlex">
+                                    <div class="left-button-border shadow" @click="toFlex">
                                         <div class="icon-small">
                                             <img src="./images/flex.png">
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items_center right-button-border" @click="toGrid">
+                                    <div class="d-flex align-items_center right-button-border shadow" @click="toGrid">
                                         <div class="icon-small">
                                             <img src="./images/grid.png">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="round-button-border">
+                                <div class="round-button-border shadow">
                                     <div class="icon-small">
                                         <img src="./images/basket.png">
                                     </div>
                                 </div>
                             </div>
                             <div class="height-menu-elem">
-                                <div class="input-search">
+                                <div class="input-search mobile-none shadow">
                                     <div class="icon-small icon-small-24"><img src="./images/search_small.png"></div>
                                     <input class="input-text-search" type="text"
                                         placeholder="Search">
                                 </div>
-
+                                <div class="round-button-border desktop-none shadow">
+                                    <div class="icon-small">
+                                        <img class="size-16-16" src="./images/search.png">
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="images-container" id="images-container">
                             <div v-for="(image, ind) in images" class="images-item" :key="ind">
-                                <div class="images-item-box">
+                                <div class="images-item-box shadow">
                                     <img class="images-item-image" :src="image.url">
                                 </div>
                                 <div class="images-item-info">

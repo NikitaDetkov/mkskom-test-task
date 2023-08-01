@@ -148,7 +148,7 @@
     padding: 45px;
     gap: 30px;
     height: 840px;
-    width: 730px;
+    max-width: 740px;
 }
 
 .images-item {
@@ -164,7 +164,7 @@
     display: grid;
     grid-template-columns: 1fr;
     height: 840px;
-    width: 730px;
+    max-width: 740px;
 }
 
 .container-grid-top {
@@ -236,3 +236,8 @@
     color: #7D8FB3;
     text-align: center;
 }
+
+.desktop-none {
+    display: none;
+}
+
