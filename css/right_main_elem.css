@@ -147,8 +147,8 @@
     justify-content: center;
     padding: 45px;
     gap: 30px;
-    height: 820px;
     max-width: 740px;
+    height: 820px;
 }
 
 .images-item {
@@ -163,8 +163,8 @@
     gap: 30px;
     display: grid;
     grid-template-columns: 1fr;
-    height: 820px;
     max-width: 740px;
+    height: 820px;
 }
 
 .container-grid-top {
